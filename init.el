@@ -1273,14 +1273,14 @@ before packages are loaded."
   ;; MacOSX
   ;; Disable touchpad zoom gestures
   ;;
-  ;; (define-key global-map (kbd "<magnify-up>") nil)
-  ;; (define-key global-map (kbd "<magnify-down>") nil)
-  ;;
-  ;; (defun practicalli-nothing ()
-  ;;   (interactive)
-  ;;   (message "Buttons are not toys") )
-  ;;
-  ;; (define-key global-map (kbd "<magnify-up>") 'practicalli-nothing)
+  (define-key global-map (kbd "<magnify-up>") nil)
+  (define-key global-map (kbd "<magnify-down>") nil)
+  
+  (defun practicalli-nothing ()
+     (interactive)
+     (message "Buttons are not toys") )
+  
+   (define-key global-map (kbd "<magnify-up>") 'practicalli-nothing)
   ;;
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
