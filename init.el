@@ -56,7 +56,7 @@ This function should only modify configuration layer settings."
                       auto-completion-enable-sort-by-usage t)
 
      ;; To have auto-completion on as soon as you start typing
-     ;; (auto-completion :variables auto-completion-idle-delay nil)
+     (auto-completion :variables auto-completion-idle-delay nil)
 
      ;; https://develop.spacemacs.org/layers/+lang/clojure/README.html
      (clojure :variables
@@ -94,7 +94,6 @@ This function should only modify configuration layer settings."
      ;; SPC g h to use GitHub repositories
      ;; SPC g g to use GitHub Gists
      github
-
      ;; graphviz - open-source graph declaration system
      ;; Used to generated graphs of Clojure project dependencies
      ;; https://develop.spacemacs.org/layers/+lang/graphviz/README.html
@@ -125,6 +124,11 @@ This function should only modify configuration layer settings."
      ;; Editing multiple lines of text concurrently
      ;; `g r' menu in Emacs normal state
      multiple-cursors
+     (plantuml :variables
+               plantuml-jar-path
+               "/usr/local/Cellar/plantuml/1.2021.0/libexec/plantuml.jar")
+
+     (osx :variables osx-use-option-as-meta nil)
 
      ;; Configuration: https://github.com/seagle0128/doom-modeline#customize
      (spacemacs-modeline :variables
@@ -152,7 +156,6 @@ This function should only modify configuration layer settings."
           org-journal-time-prefix "* "
           org-journal-time-format ""
           org-journal-carryover-items "TODO=\"TODO\"|TODO=\"DOING\"|TODO=\"BLOCKED\"|TODO=\"REVIEW\"")
-
 
      ;; Text-based file manager with preview
      ;; SPC a r
@@ -286,7 +289,7 @@ It should only modify the values of Spacemacs settings."
    ;; performance issues due to garbage collection operations.
    ;; (default '(100000000 0.1))
    dotspacemacs-gc-cons '(100000000 0.1)
-
+   ;;
    ;; Set `read-process-output-max' when startup finishes.
    ;; This defines how much data is read from a foreign process.
    ;; Setting this >= 1 MB should increase performance for lsp servers
@@ -322,7 +325,7 @@ It should only modify the values of Spacemacs settings."
    ;; with `:variables' keyword (similar to layers). Check the editing styles
    ;; section of the documentation for details on available variables.
    ;; (default 'vim)
-   dotspacemacs-editing-style 'vim
+   dotspacemacs-editing-style 'emacs
 
    ;; If non-nil show the version string in the Spacemacs buffer. It will
    ;; appear as (spacemacs version)@(emacs version)
@@ -1275,11 +1278,11 @@ before packages are loaded."
   ;;
   (define-key global-map (kbd "<magnify-up>") nil)
   (define-key global-map (kbd "<magnify-down>") nil)
-  
+
   (defun practicalli-nothing ()
      (interactive)
      (message "Buttons are not toys") )
-  
+
    (define-key global-map (kbd "<magnify-up>") 'practicalli-nothing)
   ;;
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
