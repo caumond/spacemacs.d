@@ -128,7 +128,16 @@ This function should only modify configuration layer settings."
                plantuml-jar-path
                "/usr/local/Cellar/plantuml/1.2021.0/libexec/plantuml.jar")
 
-     (osx :variables osx-use-option-as-meta nil)
+     (osx :variables
+          osx-command-as       'hyper
+          osx-option-as-as     'meta
+          osx-control-as       'control
+          osx-function-as       nil
+          osx-right-command-as 'left
+          osx-right-option-as  'left
+          osx-right-control-as 'left
+          osx-swap-option-and-command t
+          )
 
      ;; Configuration: https://github.com/seagle0128/doom-modeline#customize
      (spacemacs-modeline :variables
