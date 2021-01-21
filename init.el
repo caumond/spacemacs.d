@@ -129,17 +129,17 @@ This function should only modify configuration layer settings."
                "/usr/local/Cellar/plantuml/1.2021.0/libexec/plantuml.jar")
 
      (osx :variables
-          osx-command-as       'hyper
-          osx-option-as-as     'meta
+          osx-command-as       'meta
+          osx-option-as        'none
           osx-control-as       'control
-          osx-function-as       nil
+          osx-function-as      'hyper
           osx-right-command-as 'left
           osx-right-option-as  'left
           osx-right-control-as 'left
-          osx-swap-option-and-command t
+          osx-swap-option-and-command nil
           )
 
-     ;; Configuration: https://github.com/seagle0128/doom-modeline#customize
+     ;; CONFIGURATION: https://github.com/seagle0128/doom-modeline#customize
      (spacemacs-modeline :variables
                          doom-modeline-height 14
                          doom-modeline-major-mode-color-icon t
