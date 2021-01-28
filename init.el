@@ -56,7 +56,7 @@ This function should only modify configuration layer settings."
                       auto-completion-enable-sort-by-usage t)
 
      ;; To have auto-completion on as soon as you start typing
-     (auto-completion :variables auto-completion-idle-delay nil)
+     ;;(auto-completion :variables auto-completion-idle-delay 10)
 
      ;; https://develop.spacemacs.org/layers/+lang/clojure/README.html
      (clojure :variables
