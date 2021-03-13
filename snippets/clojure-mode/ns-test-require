@@ -1,0 +1,4 @@
+# name: ns-test-require
+# --
+(:require [clojure.test :refer [deftest is testing]]
+          [$1 :as sut])
